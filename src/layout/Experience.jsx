@@ -15,7 +15,7 @@ function Experience() {
           <Section
             key={index}
             leftComponent={left}
-            title={title + " - " + company}
+            title={title + " • " + company}
             summary={summary}
             tags={tags}
           />
@@ -33,7 +33,6 @@ const TimeRange = styled.p`
 
 const ExperienceContainer = styled.section`
   margin-bottom: 50px;
-  width: 600px;
 `;
 
 export default Experience;

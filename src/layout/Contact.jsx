@@ -3,33 +3,37 @@ import { styled } from "styled-components";
 import Heading from "../components/Heading";
 
 function Contact() {
+  const handleSubmit = (e) => {
+    // e.preventDefault();
+  };
+
   return (
     <ContactContainer>
       <Heading>Contact Me</Heading>
-      <ContactForm>
-        <NamesContainers>
-          <NameContainer>
-            <Label htmlFor="fname">First Name</Label>
-            <input id="fname" name="fname" type="text" />
-          </NameContainer>
-          <NameContainer>
-            <Label htmlFor="lname">Last Name</Label>
-            <input id="lname" name="lname" type="text" />
-          </NameContainer>
-        </NamesContainers>
-        <Label htmlFor="email">Email</Label>
-        <input id="email" name="email" type="text" />
-        <Label htmlFor="message">Message</Label>
-        <MessageField id="message" name="message" type="text" />
-        <SubmitButton>Send</SubmitButton>
+      <ContactForm onSubmit={handleSubmit}>
+        <TwoFieldContainer>
+          <HalfField>
+            <Label htmlFor="fname">Full Name *</Label>
+            <input id="fname" name="fname" type="text" required />
+          </HalfField>
+          <HalfField>
+            <Label htmlFor="company">Company</Label>
+            <input id="company" name="company" type="text" />
+          </HalfField>
+        </TwoFieldContainer>
+        <Label htmlFor="email">Email *</Label>
+        <input id="email" name="email" type="text" required />
+        <Label htmlFor="message">Message *</Label>
+        <MessageField id="message" name="message" type="text" required />
+        <ButtonContainer>
+          <SubmitButton>SUBMIT</SubmitButton>
+        </ButtonContainer>
       </ContactForm>
     </ContactContainer>
   );
 }
 
-const ContactContainer = styled.section`
-  width: 600px;
-`;
+const ContactContainer = styled.section``;
 
 const ContactForm = styled.form`
   padding: 0 20px;
@@ -42,12 +46,12 @@ const Label = styled.label`
   margin-bottom: 8px;
 `;
 
-const NamesContainers = styled.div`
+const TwoFieldContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
 
-const NameContainer = styled.div`
+const HalfField = styled.div`
   width: 48%;
 `;
 
@@ -56,6 +60,22 @@ const MessageField = styled.textarea`
   resize: none;
 `;
 
-const SubmitButton = styled.button``;
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+`;
+
+const SubmitButton = styled.button`
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 100px;
+  cursor: pointer;
+`;
 
 export default Contact;

@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   input[type="text"], textarea {
-    border: 1px solid var(--container);
+    border: 2px solid var(--container);
     outline: none;
     border-radius: 5px;
     padding: 10px;
@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   input[type="text"]:focus, textarea:focus {
-    border: 1px solid var(--primary);
+    border: 2px solid var(--primary-light);
   }
 
   input:-webkit-autofill,
@@ -27,16 +27,6 @@ const GlobalStyle = createGlobalStyle`
   input:-webkit-autofill{
     -webkit-text-fill-color: var(--text-primary) !important;
   }
-
-  /* body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-  } */
 `;
 
 export default GlobalStyle;

@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+import Navigation from "./Navigation";
 
 function Header() {
   return (
@@ -9,37 +10,41 @@ function Header() {
         <Title>Software Engineer</Title>
         <Description>This is a description</Description>
       </HeaderTextContainer>
+      <Navigation />
     </HeaderContainer>
   );
 }
 
 const HeaderContainer = styled.header`
-  width: 50%;
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  padding: 100px 0;
-  /* background-color: yellow; */
+  @media (min-width: 1024px) {
+    position: sticky;
+    top: 0;
+    min-width: 30%;
+    height: 100vh;
+    padding: 100px 0;
+    margin-right: 40px;
+  }
 `;
 
 const HeaderTextContainer = styled.div`
-  width: 50%;
+  /* width: 600px; */
+  /* padding: 20px; */
 `;
 
 const Name = styled.h1`
   font-size: 3rem;
   color: var(--text-primary);
+  margin-bottom: 10px;
 `;
 
 const Title = styled.h2`
   color: var(--text-secondary);
+  margin-bottom: 20px;
 `;
 
 const Description = styled.p`
   color: var(--text-tertiary);
+  margin-bottom: 80px;
 `;
 
 export default Header;

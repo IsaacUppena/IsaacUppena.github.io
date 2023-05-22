@@ -18,7 +18,6 @@ function About() {
 
 const AboutContainer = styled.section`
   margin-bottom: 50px;
-  width: 600px;
 `;
 
 const ParagraphContainer = styled.p`

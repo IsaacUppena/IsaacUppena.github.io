@@ -2,16 +2,31 @@
 
 html {
   --background: #111122;
-  --container: #222233;
+  --container: #22223366;
   --foreground: #333344;
   --text-primary: #eeeeff;
   --text-secondary: #bbbbcc;
   --text-tertiary: #9999aa;
-  --primary: #669966;
-  --primary-light: #99dd99;
-  --primary-dark: #225522;
+  --primary: #31e8c3;
+  --primary-light: #8cf2de;
+  --primary-dark: #12a18455;
   background-color: var(--background);
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+  /* background-size: 400% 400%;
+  animation: gradient 10s ease infinite; */
   font-family: "Inter", sans-serif;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 * {

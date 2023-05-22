@@ -9,24 +9,37 @@ import Contact from "./layout/Contact";
 function App() {
   return (
     <RootContainer>
-      <GlobalStyle />
-      <Header />
-      <Main>
-        <About />
-        <Experience />
-        <Contact />
-      </Main>
+      <Content>
+        <GlobalStyle />
+        <Header />
+        <Main>
+          <About />
+          <Experience />
+          <Contact />
+        </Main>
+      </Content>
     </RootContainer>
   );
 }
 
+const Content = styled.div`
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+  }
+  max-width: 80%;
+`;
+
 const RootContainer = styled.div`
   display: flex;
+  justify-content: center;
 `;
 
 const Main = styled.main`
-  width: 50%;
   padding: 100px 0;
+  @media (min-width: 1024px) {
+    width: 50%;
+  }
 `;
 
 export default App;
