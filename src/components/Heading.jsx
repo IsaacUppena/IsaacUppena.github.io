@@ -10,7 +10,7 @@ function Heading({ children }) {
 }
 
 const HeadingContainer = styled.div`
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
 `;
 
 const Title = styled.h2`

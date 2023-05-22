@@ -36,8 +36,8 @@ const RootContainer = styled.div`
 `;
 
 const Main = styled.main`
-  padding: 100px 0;
   @media (min-width: 1024px) {
+    padding: 100px 0;
     width: 50%;
   }
 `;

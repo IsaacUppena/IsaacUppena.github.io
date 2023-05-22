@@ -3,14 +3,10 @@ import { styled } from "styled-components";
 import Heading from "../components/Heading";
 
 function Contact() {
-  const handleSubmit = (e) => {
-    // e.preventDefault();
-  };
-
   return (
     <ContactContainer>
       <Heading>Contact Me</Heading>
-      <ContactForm onSubmit={handleSubmit}>
+      <ContactForm action="https://formspree.io/f/mrgvvebb" method="POST">
         <TwoFieldContainer>
           <HalfField>
             <Label htmlFor="fname">Full Name *</Label>
@@ -36,7 +32,7 @@ function Contact() {
 const ContactContainer = styled.section``;
 
 const ContactForm = styled.form`
-  padding: 0 20px;
+  /* padding: 0 20px; */
 `;
 
 const Label = styled.label`

@@ -4,7 +4,7 @@ const experience = [
     title: "Software Engineer",
     company: "ACT, Inc.",
     summary:
-      "Develop and maintain web applications using TypeScript, NodeJS, and Java, ensuring robust functionality, high-quality code, and implementing comprehensive unit tests for reliable software",
+      "Develop and maintain serverless AWS applications and RESTful APIs as well as comprehensive unit tests to ensure reliable software. Collaborate with team members in an Agile environment, utilizing Git for source control and Jenkins for CI/CD.",
     tags: [
       "TypeScript",
       "NodeJS",
@@ -14,14 +14,16 @@ const experience = [
       "MySQL",
       "MongoDB",
     ],
+    link: "https://www.act.org/",
   },
   {
     timeRange: "May 2021 - Dec 2021",
     title: "Web Developer Intern",
     company: "Leepfrog Technologies",
     summary:
-      "Utilized HTML, CSS, and JavaScript to develop a dashboard for support reps to interface efficiently with ticket management system",
+      "Utilized front-end web technologies to develop a dashboard for support reps to interface efficiently with ticket management system. Leveraged RESTful API and SQL queries to unify proprietary systems with an external database using CRUD operations.",
     tags: ["HTML/CSS", "JavaScript", "JQuery", "SQLite"],
+    link: "https://leepfrog.com/",
   },
 ];
 

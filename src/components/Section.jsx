@@ -26,10 +26,11 @@ const ChipText = styled.p`
 `;
 
 function Section(props) {
-  const { leftComponent, title, summary, tags } = props;
+  const { leftComponent, title, summary, tags, link } = props;
 
   return (
-    <SectionContainer>
+    <SectionContainer href={link} target="_blank">
+      {/* <Link href={link} target="_blank"> */}
       <LeftColumn>{leftComponent}</LeftColumn>
       <RightColumn>
         <Title>{title}</Title>
@@ -40,21 +41,27 @@ function Section(props) {
           ))}
         </TagsContainer>
       </RightColumn>
+      {/* </Link> */}
     </SectionContainer>
   );
 }
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.a`
   @media (min-width: 800px) {
     display: flex;
   }
   border-radius: 15px;
   transition: background-color ease-in 0.1s;
   padding: 20px;
+  text-decoration: none;
   &:hover {
     cursor: pointer;
     background-color: var(--container);
   }
+`;
+
+const Link = styled.a`
+  text-decoration: none;
 `;
 
 const LeftColumn = styled.div`

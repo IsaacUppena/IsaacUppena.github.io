@@ -8,9 +8,14 @@ function About() {
       <Heading>About</Heading>
       <ParagraphContainer>
         <Paragraph>
-          I work as a software engineer at ACT. In this time I've worked with
-          various programming languages, frameworks, and databases.
+          I've known I wanted to be a software developer from the moment I took
+          my first highschool programming class. Nearly 10 years later, I've
+          settled comfortably into what I consider to be the most dynamic,
+          exciting software today: Web Applications.
         </Paragraph>
+        {/* <Paragraph>
+          My main focus 
+        </Paragraph> */}
       </ParagraphContainer>
     </AboutContainer>
   );
@@ -21,11 +26,14 @@ const AboutContainer = styled.section`
 `;
 
 const ParagraphContainer = styled.p`
-  padding: 20px;
+  /* padding: 20px; */
+  margin-top: 10px;
+  padding-bottom: 0;
 `;
 
 const Paragraph = styled.p`
   color: var(--text-secondary);
+  margin-bottom: 20px;
 `;
 
 export default About;

@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
     color: var(--text-primary);
     width: 100%;
     transition: all ease-in 0.1s;
+    font-family: inherit;
+    font-size: inherit;
   }
 
   input[type="text"]:focus, textarea:focus {

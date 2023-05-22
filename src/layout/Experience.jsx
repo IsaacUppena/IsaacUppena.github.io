@@ -9,7 +9,7 @@ function Experience() {
     <ExperienceContainer id="experience">
       <Heading>Experience</Heading>
       {experience.map((job, index) => {
-        const { timeRange, title, company, summary, tags } = job;
+        const { timeRange, title, company, summary, tags, link } = job;
         const left = <TimeRange>{timeRange.toUpperCase()}</TimeRange>;
         return (
           <Section
@@ -18,6 +18,7 @@ function Experience() {
             title={title + " • " + company}
             summary={summary}
             tags={tags}
+            link={link}
           />
         );
       })}

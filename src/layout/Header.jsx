@@ -8,7 +8,10 @@ function Header() {
       <HeaderTextContainer>
         <Name>Isaac Uppena</Name>
         <Title>Software Engineer</Title>
-        <Description>This is a description</Description>
+        <Description>
+          I build functional, maintainable, and seamless digital experiences for
+          the web.
+        </Description>
       </HeaderTextContainer>
       <Navigation />
     </HeaderContainer>
@@ -45,6 +48,7 @@ const Title = styled.h2`
 const Description = styled.p`
   color: var(--text-tertiary);
   margin-bottom: 80px;
+  width: 70%;
 `;
 
 export default Header;
