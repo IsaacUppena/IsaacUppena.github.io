@@ -32,7 +32,9 @@ function Contact() {
 const ContactContainer = styled.section``;
 
 const ContactForm = styled.form`
-  /* padding: 0 20px; */
+  @media (min-width: 800px) {
+    margin-left: 20px;
+  }
 `;
 
 const Label = styled.label`

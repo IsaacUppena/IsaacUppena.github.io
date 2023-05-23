@@ -27,6 +27,9 @@ const HeaderContainer = styled.header`
     padding: 100px 0;
     margin-right: 40px;
   }
+  @media (min-width: 800px) {
+    padding-left: 20px;
+  }
 `;
 
 const HeaderTextContainer = styled.div`

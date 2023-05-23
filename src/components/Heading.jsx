@@ -10,7 +10,14 @@ function Heading({ children }) {
 }
 
 const HeadingContainer = styled.div`
-  padding-bottom: 20px;
+  @media (min-width: 800px) {
+    padding: 20px;
+    position: static;
+  }
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  background-color: var(--background);
 `;
 
 const Title = styled.h2`

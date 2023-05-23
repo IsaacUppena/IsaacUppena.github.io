@@ -10,8 +10,8 @@ function About() {
         <Paragraph>
           I've been passionate about developing software since I took my first
           highschool programming class. Nearly 10 years later, I've settled
-          comfortably into what I consider to be the most dynamic, exciting, and
-          unique software today: Web Applications.
+          comfortably into working with what I consider to be the most dynamic,
+          exciting, and unique software today: Web Applications.
         </Paragraph>
         {/* <Paragraph>
           My main focus 
@@ -26,7 +26,9 @@ const AboutContainer = styled.section`
 `;
 
 const ParagraphContainer = styled.p`
-  /* padding: 20px; */
+  @media (min-width: 800px) {
+    padding-left: 20px;
+  }
   margin-top: 10px;
   padding-bottom: 0;
 `;
