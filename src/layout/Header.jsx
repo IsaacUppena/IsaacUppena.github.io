@@ -9,8 +9,8 @@ function Header() {
         <Name>Isaac Uppena</Name>
         <Title>Software Engineer</Title>
         <Description>
-          I build functional, maintainable, and seamless digital experiences for
-          the web.
+          I build highly functional user-friendly digital experiences for the
+          web.
         </Description>
       </HeaderTextContainer>
       <Navigation />

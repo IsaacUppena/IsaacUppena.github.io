@@ -8,10 +8,10 @@ function About() {
       <Heading>About</Heading>
       <ParagraphContainer>
         <Paragraph>
-          I've known I wanted to be a software developer from the moment I took
-          my first highschool programming class. Nearly 10 years later, I've
-          settled comfortably into what I consider to be the most dynamic,
-          exciting software today: Web Applications.
+          I've been passionate about developing software since I took my first
+          highschool programming class. Nearly 10 years later, I've settled
+          comfortably into what I consider to be the most dynamic, exciting, and
+          unique software today: Web Applications.
         </Paragraph>
         {/* <Paragraph>
           My main focus 

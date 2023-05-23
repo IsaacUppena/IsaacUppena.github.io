@@ -49,18 +49,14 @@ function Section(props) {
 const SectionContainer = styled.a`
   @media (min-width: 800px) {
     display: flex;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--container);
+    }
+    border-radius: 15px;
+    padding: 20px;
   }
-  border-radius: 15px;
   transition: background-color ease-in 0.1s;
-  padding: 20px;
-  text-decoration: none;
-  &:hover {
-    cursor: pointer;
-    background-color: var(--container);
-  }
-`;
-
-const Link = styled.a`
   text-decoration: none;
 `;
 
@@ -73,7 +69,11 @@ const LeftColumn = styled.div`
 `;
 
 const RightColumn = styled.div`
-  width: 80%;
+  @media (min-width: 800px) {
+    width: 80%;
+    margin: none;
+  }
+  margin-bottom: 20px;
 `;
 
 const Title = styled.h3`
