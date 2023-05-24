@@ -22,7 +22,7 @@ const HeadingContainer = styled.div`
 
 const Title = styled.h2`
   color: var(--text-primary);
-  font-size: 1rem;
+  font-size: 1.2rem;
 `;
 
 export default Heading;

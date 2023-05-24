@@ -3,31 +3,29 @@ const cardData = [
     className: "frontend",
     title: "Front-End",
     description:
-      "Flexible, intuitive user interfaces to provide seamless user experiences",
-    icon: "test",
+      "Responsive, intuitive interfaces for accessible and immersive user experiences",
     tags: ["JavaScript", "TypeScript", "React", "HTML/CSS", "Jest"],
   },
   {
     className: "backend",
     title: "Back-End",
     description:
-      "Functional, maintainable RESTful APIs to ensure reliable access to data",
-    icon: "test",
-    tags: ["Java", "Spring Boot", "NodeJS", "MySQL", "MongoDB"],
+      "Optimized, secure RESTful APIs for reliable data handling and storage",
+    tags: ["Java", "Spring Boot", "NodeJS", "MySQL", "MongoDB", "JUnit"],
   },
   {
     className: "cloud",
     title: "Cloud",
-    description: "Scalable AWS serverless computing",
-    icon: "test",
+    description:
+      "Efficient, scalable AWS cloud solutions for seamless data access and management",
     tags: ["Lambda", "S3", "SQS", "API Gateway", "CloudWatch"],
   },
   {
     className: "cicd",
     title: "CI/CD",
-    description: "Rapid deployment",
-    icon: "test",
-    tags: ["Jenkins", "Git", "Agile/SCRUM"],
+    description:
+      "Automated testing and deployment pipelines for fast and reliable software delivery",
+    tags: ["Jenkins", "Git", "Agile/Scrum"],
   },
 ];
 

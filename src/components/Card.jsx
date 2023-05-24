@@ -29,8 +29,10 @@ function Card(props) {
         <Icon name={className} />
       </TitleContainer>
       <Description>{description}</Description>
-      <Divider />
-      <Tags>{tags.join(" • ")}</Tags>
+      <Footer>
+        <Divider />
+        <Tags>{tags.join(" • ")}</Tags>
+      </Footer>
     </CardContainer>
   );
 }
@@ -38,10 +40,13 @@ function Card(props) {
 const CardContainer = styled.div`
   border-radius: 15px;
   background-color: var(--container);
-  padding: 20px;
+  padding: 25px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 100%;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @media (min-width: 800px) {
     width: 45%;
     margin-bottom: 30px;
@@ -72,24 +77,30 @@ const TitleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 15px;
 `;
 
 const Title = styled.h3`
-  /* color: var(--text-primary); */
   color: var(--background);
   font-size: 1.5rem;
 `;
 
 const Description = styled.p`
-  /* color: var(--text-primary); */
   color: var(--background);
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+`;
+
+const Footer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Divider = styled.hr`
   background-color: #00000066;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   height: 1px;
   border: none;
 `;
@@ -98,7 +109,7 @@ const Tags = styled.p`
   /* color: var(--text-primary); */
   color: var(--background);
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 `;
 
 export default Card;

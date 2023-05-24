@@ -13,7 +13,14 @@ function About() {
           I've been passionate about developing software since I took my first
           highschool programming class. Nearly 10 years later, I've settled
           comfortably into working with what I consider to be the most dynamic,
-          exciting, and unique software today: Web Applications.
+          exciting, and unique software today:{" "}
+          <Highlight>Web Applications</Highlight>.
+        </Paragraph>
+        <Paragraph>
+          By combining lessons learned from both my professional experience and
+          personal projects, I have developed a broad skill set spanning the
+          entire spectrum of modern web technologies. Here are a few examples of
+          what I have been working on recently:
         </Paragraph>
       </ParagraphContainer>
       <CardContainer>
@@ -40,12 +47,18 @@ const ParagraphContainer = styled.p`
 const Paragraph = styled.p`
   color: var(--text-secondary);
   margin-bottom: 20px;
+  font-size: 1.2rem;
 `;
 
 const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+`;
+
+const Highlight = styled.span`
+  font-weight: bold;
+  color: var(--text-primary);
 `;
 
 export default About;

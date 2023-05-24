@@ -38,7 +38,7 @@ const HeaderTextContainer = styled.div`
 `;
 
 const Name = styled.h1`
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: var(--text-primary);
   margin-bottom: 10px;
 `;
@@ -46,11 +46,13 @@ const Name = styled.h1`
 const Title = styled.h2`
   color: var(--text-secondary);
   margin-bottom: 20px;
+  font-size: 2rem;
 `;
 
 const Description = styled.p`
   color: var(--text-tertiary);
   margin-bottom: 80px;
+  font-size: 1.2rem;
   width: 70%;
 `;
 
