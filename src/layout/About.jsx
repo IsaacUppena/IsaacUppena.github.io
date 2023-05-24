@@ -34,6 +34,7 @@ function About() {
 
 const AboutContainer = styled.section`
   margin-bottom: 50px;
+  scroll-margin-top: 100px;
 `;
 
 const ParagraphContainer = styled.p`

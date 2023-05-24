@@ -2,6 +2,9 @@ import React from "react";
 import { styled } from "styled-components";
 import Heading from "../components/Heading";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+
 function Contact() {
   return (
     <ContactContainer id="contact">
@@ -22,7 +25,9 @@ function Contact() {
         <Label htmlFor="message">Message *</Label>
         <MessageField id="message" name="message" type="text" required />
         <ButtonContainer>
-          <SubmitButton>SUBMIT</SubmitButton>
+          <SendButton>
+            Send <SendIcon icon={faChevronRight} />
+          </SendButton>
         </ButtonContainer>
       </ContactForm>
     </ContactContainer>
@@ -30,8 +35,9 @@ function Contact() {
 }
 
 const ContactContainer = styled.section`
+  scroll-margin-top: 100px;
   @media (min-width: 800px) {
-    margin-bottom: 600px;
+    margin-bottom: 800px;
   }
 `;
 
@@ -65,19 +71,29 @@ const MessageField = styled.textarea`
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 15px;
 `;
 
-const SubmitButton = styled.button`
+const SendButton = styled.button`
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: var(--primary-dark);
-  color: var(--primary-light);
-  font-size: 0.9rem;
-  font-weight: 600;
-  width: 100px;
+  background-color: var(--text-primary);
+  color: var(--background);
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+`;
+
+const SendIcon = styled(FontAwesomeIcon)`
+  color: var(--background);
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
 `;
 
 export default Contact;

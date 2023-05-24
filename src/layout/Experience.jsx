@@ -9,7 +9,17 @@ function Experience() {
     <ExperienceContainer id="experience">
       <Heading>Experience</Heading>
       {experience.map((job, index) => {
-        const { timeRange, title, company, summary, tags, link } = job;
+        const {
+          timeRange,
+          title,
+          company,
+          summary,
+          frontend,
+          backend,
+          cloud,
+          cicd,
+          link,
+        } = job;
         const left = <TimeRange>{timeRange.toUpperCase()}</TimeRange>;
         return (
           <Section
@@ -17,7 +27,10 @@ function Experience() {
             leftComponent={left}
             title={title + " • " + company}
             summary={summary}
-            tags={tags}
+            frontend={frontend}
+            backend={backend}
+            cloud={cloud}
+            cicd={cicd}
             link={link}
           />
         );
@@ -34,6 +47,7 @@ const TimeRange = styled.p`
 
 const ExperienceContainer = styled.section`
   margin-bottom: 50px;
+  scroll-margin-top: 100px;
 `;
 
 export default Experience;

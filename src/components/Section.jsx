@@ -2,46 +2,87 @@ import React from "react";
 import { styled } from "styled-components";
 
 function Chip(props) {
-  const { title } = props;
+  const { title, type } = props;
   return (
-    <ChipContainer>
-      <ChipText>{title}</ChipText>
+    <ChipContainer className={type}>
+      <ChipText className={type}>{title}</ChipText>
     </ChipContainer>
   );
 }
 
 const ChipContainer = styled.div`
-  padding: 5px 8px;
+  padding: 7px 10px;
   border-radius: 15px;
   margin-right: 5px;
   margin-bottom: 5px;
   background-color: var(--primary-dark);
+  &.frontend {
+    background-color: #f6d36533;
+  }
+  &.backend {
+    background-color: #4facfe33;
+  }
+  &.cloud {
+    background-color: #ff61d233;
+  }
+  &.cicd {
+    background-color: #43e97b33;
+  }
 `;
 
 const ChipText = styled.p`
   color: var(--primary-light);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 500;
   margin: 0;
+  &.frontend {
+    color: #f6d365;
+  }
+  &.backend {
+    color: #4facfe;
+  }
+  &.cloud {
+    color: #ff61d2;
+  }
+  &.cicd {
+    color: #43e97b;
+  }
 `;
 
 function Section(props) {
-  const { leftComponent, title, summary, tags, link } = props;
+  const {
+    leftComponent,
+    title,
+    summary,
+    // tags,
+    frontend,
+    backend,
+    cloud,
+    cicd,
+    link,
+  } = props;
 
   return (
     <SectionContainer href={link} target="_blank">
-      {/* <Link href={link} target="_blank"> */}
       <LeftColumn>{leftComponent}</LeftColumn>
       <RightColumn>
         <Title>{title}</Title>
         <Summary>{summary}</Summary>
         <TagsContainer>
-          {tags.map((tag, index) => (
-            <Chip key={index} title={tag} />
+          {frontend.map((tag, index) => (
+            <Chip key={index} title={tag} type="frontend" />
+          ))}
+          {backend.map((tag, index) => (
+            <Chip key={index} title={tag} type="backend" />
+          ))}
+          {cloud.map((tag, index) => (
+            <Chip key={index} title={tag} type="cloud" />
+          ))}
+          {cicd.map((tag, index) => (
+            <Chip key={index} title={tag} type="cicd" />
           ))}
         </TagsContainer>
       </RightColumn>
-      {/* </Link> */}
     </SectionContainer>
   );
 }

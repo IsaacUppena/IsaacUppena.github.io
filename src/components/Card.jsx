@@ -41,30 +41,49 @@ const CardContainer = styled.div`
   border-radius: 15px;
   background-color: var(--container);
   padding: 25px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 100%;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: box-shadow ease-in 0.2s;
   @media (min-width: 800px) {
     width: 45%;
     margin-bottom: 30px;
   }
   &.frontend {
-    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    background: linear-gradient(45deg, #f6d365 0%, #f8e09d 100%);
+    @media (min-width: 800px) {
+      &:hover {
+        box-shadow: #f6d365 0px 5px 25px;
+      }
+    }
   }
   &.backend {
-    background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
-    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+    @media (min-width: 800px) {
+      &:hover {
+        box-shadow: #4facfe 0px 5px 25px;
+      }
+    }
   }
   &.cloud {
-    background: linear-gradient(45deg, #df38f1 0%, #f093fb 100%);
     background: linear-gradient(45deg, #ff61d2 0%, #f0b0d0 100%);
+    @media (min-width: 800px) {
+      &:hover {
+        box-shadow: #ff61d2 0px 5px 25px;
+      }
+    }
   }
   &.cicd {
     background: linear-gradient(45deg, #43e97b 0%, #38f9d7 100%);
+    @media (min-width: 800px) {
+      &:hover {
+        box-shadow: #43e97b 0px 5px 25px;
+      }
+    }
   }
+  cursor: default;
 `;
 
 const FAIcon = styled(FontAwesomeIcon)`
@@ -106,7 +125,6 @@ const Divider = styled.hr`
 `;
 
 const Tags = styled.p`
-  /* color: var(--text-primary); */
   color: var(--background);
   font-weight: 500;
   font-size: 0.9rem;

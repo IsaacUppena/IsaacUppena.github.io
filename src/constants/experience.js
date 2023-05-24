@@ -14,6 +14,10 @@ const experience = [
       "MySQL",
       "MongoDB",
     ],
+    frontend: ["TypeScript", "ReactJS"],
+    backend: ["Java", "Spring Boot", "NodeJS", "MySQL", "MongoDB"],
+    cloud: ["AWS"],
+    cicd: ["Jenkins"],
     link: "https://www.act.org/",
   },
   {
@@ -23,6 +27,10 @@ const experience = [
     summary:
       "Utilized front-end web technologies to develop a dashboard for support reps to interface efficiently with ticket management system. Leveraged RESTful API and SQL queries to unify proprietary systems with an external database using CRUD operations.",
     tags: ["HTML/CSS", "JavaScript", "JQuery", "SQLite"],
+    frontend: ["HTML/CSS", "JavaScript", "JQuery"],
+    backend: ["SQLite"],
+    cloud: [],
+    cicd: [],
     link: "https://leepfrog.com/",
   },
 ];

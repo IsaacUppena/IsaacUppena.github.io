@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   input[type="text"], textarea {
-    border: 2px solid var(--container);
+    border: 3px solid var(--container);
     outline: none;
     border-radius: 5px;
     padding: 10px;
@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   input[type="text"]:focus, textarea:focus {
-    border: 2px solid var(--primary-light);
+    border: 3px solid var(--text-primary);
   }
 
   input:-webkit-autofill,
