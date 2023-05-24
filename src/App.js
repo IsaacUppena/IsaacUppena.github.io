@@ -27,6 +27,9 @@ const Content = styled.div`
     display: flex;
     justify-content: center;
   }
+  @media (min-width: 1800px) {
+    max-width: 60%;
+  }
   max-width: 80%;
 `;
 
@@ -38,7 +41,7 @@ const RootContainer = styled.div`
 const Main = styled.main`
   @media (min-width: 1024px) {
     padding: 100px 0;
-    width: 50%;
+    width: 70%;
   }
 `;
 

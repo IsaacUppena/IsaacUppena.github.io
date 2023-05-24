@@ -4,7 +4,7 @@ import Heading from "../components/Heading";
 
 function Contact() {
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       <Heading>Contact Me</Heading>
       <ContactForm action="https://formspree.io/f/mrgvvebb" method="POST">
         <TwoFieldContainer>
@@ -29,7 +29,11 @@ function Contact() {
   );
 }
 
-const ContactContainer = styled.section``;
+const ContactContainer = styled.section`
+  @media (min-width: 800px) {
+    margin-bottom: 600px;
+  }
+`;
 
 const ContactForm = styled.form`
   @media (min-width: 800px) {

@@ -71,7 +71,7 @@ const LeftColumn = styled.div`
 const RightColumn = styled.div`
   @media (min-width: 800px) {
     width: 80%;
-    margin: none;
+    margin: 0;
   }
   margin-bottom: 20px;
 `;

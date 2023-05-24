@@ -1,6 +1,8 @@
 import React from "react";
 import { styled } from "styled-components";
 import Heading from "../components/Heading";
+import Card from "../components/Card";
+import cardData from "../constants/cards";
 
 function About() {
   return (
@@ -13,10 +15,12 @@ function About() {
           comfortably into working with what I consider to be the most dynamic,
           exciting, and unique software today: Web Applications.
         </Paragraph>
-        {/* <Paragraph>
-          My main focus 
-        </Paragraph> */}
       </ParagraphContainer>
+      <CardContainer>
+        {cardData.map((data, index) => {
+          return <Card {...data} key={index} />;
+        })}
+      </CardContainer>
     </AboutContainer>
   );
 }
@@ -36,6 +40,12 @@ const ParagraphContainer = styled.p`
 const Paragraph = styled.p`
   color: var(--text-secondary);
   margin-bottom: 20px;
+`;
+
+const CardContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 `;
 
 export default About;
